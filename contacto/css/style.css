@@ -1,0 +1,366 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+strong{
+    font-weight: bolder;
+}
+/* Mobile */
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    html {
+        background: url(../img/fondo2.jpg) no-repeat fixed;
+        background-position: left;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        color: #262626;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size:62.5%;
+    }
+    body{
+
+        background-image: url("../img/overlay.png");
+        background-repeat: repeat;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        min-height: 100%;
+        font-size: 10px;
+    }
+    h1,h4{
+        font-family: "Oswald";
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    a,a:link,a:visited,a:hover,a:active  {color:white; background-color:transparent; text-decoration:none}
+    .barra{opacity: 0.8;background-color:#333;}
+    .barra,.barra2{
+        height: 56px;
+        width: 100%;
+    }
+    .barra2{position: absolute;top:0;}
+    .barra2 img{ margin:12px 0 0 8px; width:44%; height: auto; max-width: 180px; float:left;}
+    .barra2 ul{
+        width: 50%;
+        min-width:150px;
+        height: 100%;
+        float: right;
+        padding: 0;
+        margin:0;
+    }
+    .barra2 ul li{
+        width: 25%;
+        height: 100%;
+        color:#d4d4d4;
+        text-align: center;
+        display: inline-block;
+        float: right;
+    }
+    .barra2 ul li i{
+        margin:2px auto 0 auto;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        padding: 10px;
+    }
+    .barra2 ul li:nth-child(4) i:hover,.barra2 ul li:nth-child(3) i:hover,.barra ul li:nth-child(2) i:hover,.barra ul li:nth-child(1) i:hover{
+        cursor:pointer;
+        transition: all 300ms ease-in-out 0s;
+        color:white;
+    }
+    
+    .barra2 ul li:nth-child(4) i:hover{background-color:darkgreen;}
+    .barra2 ul li:nth-child(3) i:hover{background-color:#3b5998;}
+    .barra2 ul li:nth-child(2) i:hover{background-color:#339dc3;}
+    .barra2 ul li:nth-child(1) i:hover{background-color:red;}
+
+    .encierro{
+        margin:30px auto 0 auto;
+        position: relative;
+    }
+    .presenta{
+        width: 90%;
+        color: #008000;
+        margin:0 auto;
+        text-align: center;
+    }
+    .presenta div{
+        margin:10px 0 20px 0;
+    }
+
+    .presenta div .ico{
+        background-color: none;
+        display: block;
+        width: 70px;
+        height: 25px;
+        float:left;
+        vertical-align: middle;
+        font-size:30px;
+        position: absolute;
+        text-align: right;
+    }
+    .presenta h1, .gracias h1{
+        font-weight: 700;
+        font-size: 35px;
+        font-size: 3.5rem;
+        line-height: 35px;
+        line-height: 3.5rem;
+        color:white;
+    }
+    .presenta h4,.formulario h4{
+        color: #00b504;
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: bolder;
+    }
+
+    .presenta p{text-transform: uppercase;font-size: 20px; color:#fff;}
+
+    .gracias { display: table-cell;vertical-align: middle;}
+    .gracias h1{line-height: 55px;line-height: 5.5rem;}
+    .gracias p{color:white; font-size:20px; font-size: 2rem; line-height:25px; line-height: 2.5rem; text-align: left;}
+
+    .formulario,.gracias{
+        margin:30px auto 0 auto;
+        width: 70%;
+        opacity: 0.8;
+        
+        text-align: center;
+        background-color: rgba(20, 20, 20, 0.65);
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 30px 40px 40px 25px;
+    }
+    .formulario input,.formulario textarea, .formulario select{
+        width: 100%;
+        height: 44px;
+        margin-bottom: 24px;
+        padding-left: 10px;
+        font-size: 16px;
+        transition: all 300ms ease-in-out 0s;
+        font-family: 'Roboto Condensed', sans-serif;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+    
+    .formulario input:active ,.formulario textarea:active{
+        border:1px solid #0f8f32;
+
+    }
+    .formulario textarea{height: 150px;padding-top: 12px;font-size: 1.6rem; font-weight:inherit;}
+    .formulario input[type="submit"]{
+        background-color: #00b504;
+        color:#135325;
+        font-size: 20px;
+        border:1px solid #135325;
+        width: 260px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .formulario input[type="submit"]:hover{
+        color:white;
+        cursor: pointer;
+    }
+    .clearfix {
+        *zoom : 1;
+    }
+    .clearfix:before,.clearfix:after {
+        display: table;
+        content : "";
+    }
+    .clearfix:after {
+        clear : both;
+    }
+    div.msg{
+        display: none;
+    }
+    div.error{
+        width: 90%;
+        color:white;
+        margin: 0 auto;
+        left:0;
+        right: 0;
+        position: absolute;
+        background: #f4cac8;
+        border: 1px solid #eba19e;
+        color: #da4f49;
+        padding: 12px 15px;
+        line-height: 1.5rem;
+        font-size: 1.5rem;
+        text-align: center;
+        z-index: 9999;
+        transition: all 300ms ease-in-out 0s;
+        display:block;
+    }
+    div.error span.exit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #da4f49;
+        color: #fff;
+        line-height: 1.1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: .2rem .3rem;
+        cursor: pointer;
+        border-left: 1px dotted #eba19e;
+        border-bottom: 1px dotted #eba19e;
+    }
+    input:required:invalid, textarea:required:invalid, select:required:invalid{
+        box-shadow:0px 0px 5px red;
+        -webkit-box-shadow: 0px 0px 5px red;
+        -moz-box-shadow: 0px 0px 5px red;
+        outline: 2px;
+        border:1px solid red;
+    }
+    input:required:valid, textarea:required:valid, select:required:valid{
+         box-shadow:0px 0px 5px green;
+        -webkit-box-shadow: 0px 0px 5px green;
+        -moz-box-shadow: 0px 0px 5px green;
+        outline: 2px;
+        border:1px solid green;
+    }
+    input:focus, textarea:focus{
+        border:1px solid black;
+    }
+
+
+
+/* Tablet y PC */
+@media (min-width: 900px) {
+          html {
+           bacground-position:center;
+        }
+
+    .barra,.barra2{
+        height: 75px;
+    }
+    .barra2 img{width: 387px; height: 66px;max-width: inherit; margin:4px 0 0 8px;}
+    .barra2 ul{
+        width: 25%;
+        min-width:250px;
+    }
+    .barra2 ul li{
+        width: 25%;
+    }
+    .barra2 ul li i{
+        margin:8px auto 0 auto;
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+    }
+
+    .encierro{
+        max-width: 1170px;
+        height:700px ;
+        margin:20px auto 0 auto;
+    }
+
+    .presenta{
+        float:left;
+        width: 50%;
+        color:#fff;
+    }
+    .presenta div{
+            margin:30px 0 40px 0;
+    }
+    .presenta div .ico{
+        position: relative;
+        background-color: green;
+        font-size: 30px;
+        width: 60px;
+        text-align: center;
+    }
+    .presenta div h4,.presenta div p{
+        text-align: left;
+        padding-left: 150px;
+    }
+    .presenta .tel .ico{
+        height: 85px;
+    }
+    .presenta .ubi .ico{
+        height: 165px;
+    }
+    .presenta .tel i{
+        margin-top: 27px;
+    }
+    .presenta .ubi i{
+        margin-top: 67px;
+    }
+    .presenta h4,.formulario h4{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .presenta div h4, .presenta div p{
+        margin-left: -60px;
+    }
+    .presenta h1, .gracias h1{
+        font-size: 65px;
+        font-size: 6.5rem;
+        line-height: 65px;
+        line-height: 6.5rem;
+        color:white;
+    }
+
+    .gracias h1{
+        line-height: 90px;
+        line-height: 9rem;
+    }
+
+    .presenta p{font-size: 40px}
+
+    .formulario{
+        float:right;
+        width: 40%;
+        margin-top: 0;
+    }
+
+
+}

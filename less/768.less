@@ -1,0 +1,311 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* 768 =================================================== */
+
+#wrapper{
+    margin: 0 auto;
+}
+
+#inicio{
+    height: 130px;
+}
+
+#home,#about,#ubicacion{
+    footer{
+        display: inherit;
+        .font-size(80);
+        text-align: center;
+        color: #008f42;
+        .animation(fade-in 2s linear infinite alternate);
+        cursor:all-scroll;
+    }
+}
+#home{
+    background: url(../img/fondo.jpg) 70% 0 repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+}
+#ubicacion{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+    .envuelve-ubi {        
+        padding-top:150px;
+        h2{
+            margin:0;
+        }
+        h4{
+            .font-size(28);
+        }
+        >div{
+            p{
+                .font-size(28);
+                margin-left: 75px;
+            }
+        }
+        .tel,.ubi,.email{width: 100%;}
+        .tel{
+            margin: 30px 0 40px 0;
+            .ico{
+                height: 125px;
+                float:left;
+                i{
+                    margin-top: 47px;
+                }
+            }
+        }
+        .ubi{
+            .ico{
+                height: 165px;
+            }
+            i{
+                margin-top: 67px;
+            }
+        }
+        .email{
+            .ico{
+                height: 85px;
+                i{
+                    margin-top: 27px;
+                }
+            }
+        }
+    }
+    footer{
+        padding: 10px;
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        width: 90%;
+        i{
+            margin:0 0 0 10%;
+            padding:0;
+            height: 80px;
+            width: 80px;
+            .rounded(50%);
+            background-color: @white;
+        }
+    }
+}
+#about{
+    padding:150px 20px 20px 20px;
+    img{
+        display: block;
+        width: 40%;
+        float: right;
+        margin: 0 1rem 2rem 2rem;
+    }
+    article{
+        #mis,#vis,#val{ width:26%;}
+        #mis{ float:left; margin: 0 5%;}
+        #vis{ float:left;}
+        #val{ 
+            float: right; margin: 0 5%;
+        }
+
+    }
+}
+#ubicacion{
+    padding-top:150px;
+    min-height: 1000px;
+    .info-ubicacion,h2 {
+        padding-left: 20px;
+        text-align: left;
+    }
+    iframe{
+        width: 49%;
+        min-height: 868px;
+        position: absolute;
+        top:125px;
+        right:0;
+        border-left:8px solid @white;
+    }
+    footer{
+        margin-top: 0;
+    }
+}
+#heading{
+    width : 1070px;
+    max-width: 100%;
+    height: 127px;
+    .social-barra{
+        ul{
+            padding-right: 20px;
+            min-width: 161px;
+            li{
+                width: 50px;
+                i{
+                    font-size: 28px;
+                    padding: 8px 0  0 0;
+                }
+            }
+        }
+    }
+
+    .menu-barra {
+        h1{
+            position: relative;
+            background-color: transparent;
+            height: inherit;
+            width: inherit;
+            margin:0 0 0 30px;
+        }
+
+        ul{
+            width: inherit;
+            text-align: inherit;
+            padding:5px 0 0 0;
+            margin-right: 10px;
+            margin-top:inherit;
+            a{
+                width: 80px;
+                text-decoration: none;
+                margin-left: 2px;
+            }
+        }
+    }
+
+}
+
+#banner{
+    display: inherit;
+    max-height: 295px;
+}
+#opciones,#secciones{
+    display: table;
+    width: 100%;
+
+    // le pongo un padding unicamente al primer cuadro .opc
+    // del lado izquierdo, para que se empareje con el .opc final
+
+    .opc:nth-of-type(1){
+        padding-left:0;
+    }
+    .opc{
+        display: table-cell;
+        width: 22%;
+        padding-left:1%; 
+        .img{
+        }
+
+
+        // Elimino discos y distitivos a las listas    
+        ul{
+            list-style: none;
+            list-style-type: none;
+        }
+    }
+}
+#opciones{
+    margin-bottom: 20px;
+    .opc{
+        .encierra {
+            .img{
+                cursor:pointer;
+            }
+        }
+
+    }
+    //Coloco un grupo a la par del otro para las opciones que tienen 2 grupos
+
+    /*
+    // Dibujo linea divisoria solo en refacciones
+    .ref{
+    ul{
+    &>li:nth-child(1){
+    border-right: 3px solid @black;
+}
+}
+
+}*/
+} // fin opciones
+
+
+#secciones{
+    .opc{
+        width: 22%;       
+    }   
+}
+
+
+
+.articulo {
+    h1{
+        text-align: left;
+    }
+    .barra-articulo{
+        padding-left: 20px;
+        text-align: left;
+        .btn-compartir{
+            margin: 0;
+            a{
+                position: absolute;
+                right: 40px;
+                padding: 3px 8px;
+                top:2px;
+            }
+        }
+    }
+    img{
+        margin:20px;
+        float: left;
+        width: 279px;
+        display: inherit;
+    }
+    .descripcion {
+        padding: 20px 40px 0 0;
+        float: right;
+        width: 650px;
+    }
+    .barra-opciones{
+        padding-right: 40px;
+        margin:0;
+        a{
+            margin:0 0 0 20px;
+            width: inherit;
+        }
+    }
+}
+.catalogos{
+
+    .icono{
+        left:300px;
+    }
+    ul{
+        padding:0 0 0 5%;
+        a{
+            li{
+                width: 30%;
+                float:left;
+                span{
+                }
+            }
+
+        }
+
+    }
+}
+#contacto{
+
+    .formulario {
+        margin-top: 100px;
+        width: 60%;
+        input{
+            height: 40px;
+        }
+        textarea{
+            height: 100px;
+        }
+    }
+}

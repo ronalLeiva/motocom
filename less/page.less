@@ -1,0 +1,739 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+
+.flota-derecha{
+    float: right;
+}
+.flota-izquierda{
+    float:left;
+}
+
+#wrapper{
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    margin:0 2%;
+    
+}
+#inicio{
+    display: block;
+    height: 105px;
+}
+
+#home,#about,#ubicacion{
+    footer{
+        display: none;
+    }
+}
+
+#home{
+    position: relative;
+}
+#ubicacion{
+    background: url(../img/fondo2.jpg) 50% 0 no-repeat fixed;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size:auto;
+    background-position:top;    
+    position: relative;
+    .envuelve-ubi {        
+        background: url(../img/overlay.png) repeat fixed;
+        background-color: rgba(0,0,0,0.4);        
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        padding-top:110px;
+        h2{
+            color:@white;
+            width: 60%;
+            border-bottom: 3px solid;
+            margin:0 0 1.5em 20px;
+            text-align: left;
+        }
+        h4{
+            margin:0 0 0 75px;
+            color: #00b504;
+            .font-size(20);
+        }
+        >div{
+            padding-left: 20px;
+            color:@white;
+            p{
+                .font-size(18);
+                margin-bottom: 10px;
+            }
+            .ico{
+                position: relative;
+                background-color: green;
+                font-size: 30px;
+                width: 60px;
+                text-align: center;
+                float: left;
+                vertical-align: middle;
+            }
+        }
+        .tel,.ubi,.email{
+            width: 80%;
+            height: 100%;
+        }
+        .tel{
+            .ico{
+                height: 80px;
+                float:left;
+                i{
+                    margin-top: 27px;
+                }
+            }
+        }
+        .ubi{
+            .ico{
+                height: 110px;
+            }
+            i{
+                margin-top: 40px;
+            }
+        }
+        .email{
+            .ico{
+                height: 58px;
+                i{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+#about{
+    background: url(../img/fondo-about.jpg) 50% 0 repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;    
+    min-height: 1000px;
+    padding:110px 20px 20px 20px;
+    color:@white;
+    position: relative;
+    img{
+        float: none;
+        display: none;
+    }
+    h2{
+        border-bottom: 3px solid;
+        width: 70%;
+    }
+    h3{
+        margin-top: 1em;
+
+    }
+    article{
+        p{
+            letter-spacing: .04em;
+            line-height: 1.8em;
+            //word-break: break-all;
+            text-align: justify;
+        }
+        #mis,#vis,#val{ width:100%; margin: 0;}    
+        #val{ 
+            >ul{
+                margin-left: 0px;
+            }
+        }
+        
+    }
+}
+#ubicacion{
+    padding-top:0px;
+    min-height: 500px;
+    .info-ubicacion,h2 {
+        float:none;
+        text-align: center;
+    }
+    iframe{
+        width: 100%;
+        min-height: 400px;       
+    }
+}
+#heading{
+    background-color: @white;
+    z-index: 9999;
+    width: 96%;
+    height: 103px;
+    position: fixed;
+    top:0;
+    .social-barra{
+        background-color:@empresafondo;
+        height: 47px;
+        ul{
+            padding: 2px 5px 0 0;
+            min-width: 90px;
+            li{
+                display: inline-block;
+                list-style: none;
+                text-align: center;
+                width: 42px;
+                height: 40px;
+                i{
+                    font-size: 24px;
+                    width: 42px;
+                    height:42px;
+                    color:@white;
+                    .rounded(50%);
+                    padding: 10px 0  0 0;
+                }
+                &:nth-child(3) i:hover,
+                &:nth-child(2) i:hover,
+                &:nth-child(1) i:hover{
+                    cursor:pointer;
+                    transition: all 250ms ease-in-out 0s;
+                    colo:white;
+                }
+                &:nth-child(1) i:hover {background-color:#3b5998;}
+                &:nth-child(2) i:hover {background-color:#339dc3;}
+                &:nth-child(3) i:hover {background-color:red;}
+
+            }
+        }
+    }
+    
+    // clases para asignar a botones desde JS
+    .bot-normal{
+        background-color: @buttonbackground;        
+    }
+    .bot-activo{
+        background-color: #008f42;
+        color:@white;
+        
+    }
+    .menu-barra {
+        height: 50px;
+        padding:0;
+        h1{
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 56%;
+            height: 47px;
+            background-color: @white;
+            img{                
+                width: 95%;                
+            }
+        }
+        ul{
+            width: 100%;
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin-top: -5px;
+            a{
+                display: inline-block;                
+                width: 24%;
+                height: 40px;
+                text-align: center;
+                line-height:40px;
+                text-decoration: none;
+                .rounded(6px);   
+                &:hover{
+                    background-color: #008f42;
+                    color:@white;
+                    cursor:pointer;
+                    transition: all 250ms ease-in-out 0s;
+                }
+            }
+        }
+
+
+    }
+}
+
+#banner{
+    display: none;
+}
+#opciones,#secciones{
+    width: 100%;
+    
+    // le pongo un padding unicamente al primer cuadro .opc
+    // del lado izquierdo, para que se empareje con el .opc final
+    .opc{
+        display: block;
+        width: 100%;
+        height:auto;
+        margin-bottom: 1rem;        
+        .img{
+            background-image: url('../img/sprite-botones.jpg');
+            background-size:400% 200%;
+            background-repeat: no-repeat;
+            width: 100%;
+            position: relative;
+            .subtitulo{
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+                color:@white;
+                font-family: 'Oswald';
+                .font-size(30);
+                position: absolute;
+                bottom: 0;
+                background-color: @black;
+                opacity: .8;
+                letter-spacing: .125em;
+                line-height: 3rem;
+            }
+            // me sirve para colorear el subtitulo de las categorias de marcas desde js
+            .verde{
+                background-color:  #008f42;
+                opacity: .8;
+            }
+        }
+
+        
+        // Elimino discos y distitivos a las listas    
+        ul{
+            list-style: none;
+            list-style-type: none;
+        }
+    }
+}
+#opciones{
+    .opc{
+        .encierra {
+            .acc{
+                background-position:0 0;
+            }
+            .ref{
+                background-position:33.333333333% 0;
+            }
+            .con{
+                background-position:66.666666667% 0;
+            }
+            .lla{
+                background-position:100% 0;
+            }
+
+            >ul{
+                min-height: 260px;
+                transition: all .5s linear; // efecto para aparecer y desaparecer
+                .box-shadow(0px 1px 14px 0px rgba(50, 50, 50, 0.30));
+                >li{
+                    padding-left: 10px;
+                }
+
+                // Elimino el espaciado interno de las listas
+                ul{
+                    padding:0;
+                }
+
+                // Truco para que todos los textos tengan el mismo tamaño aunque esten dentro de otro ul
+
+                li ul{
+                    font-size: 1em;
+                }
+                a{
+                    &:hover{
+                        background-color:@empresafondo;
+                        color:@white;
+                        font-weight: bold;
+                        transition: all 200ms ease-in-out 0s;
+                    }
+                }
+            }
+            .menu-simple,.menu-doble{
+                font-size: .8em;
+                padding:.4em 0 0 0;
+                margin:0;
+                background-color: @white;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                }            
+            }  
+
+            .menu-simple{
+                >li{
+                    &:nth-child(1){                
+                        a{
+                            display: block;
+                            width: 100%;
+                            padding:3px;
+                        }                
+                    }
+                }
+            }
+
+            // Selecciono las opciones de marca cuando se divide en 2 el cuadro, al primero le doy menor porcentaje para que deje un margen del lado derecho.    
+            .menu-doble{            
+                >li{
+                    &:nth-child(1){
+                        float:left;
+                        width:47%;
+                        >ul{
+                            >a{
+                                display: block;
+                                padding: 3px;
+                            }
+                        }
+                }
+
+                    &:nth-child(2){
+                        float: right;
+                        width: 50%;
+                        >ul{
+                            >a{
+                                display: block;
+                                padding: 3px;                            
+                            } 
+                        }
+                    }
+                }
+
+            }
+
+            //Titulo para las marcas que lo necesitan
+            .titulo-list{
+                font-weight: bold;
+                font-size: 1.2em;
+            }  
+        }
+
+    }
+} // fin opciones
+
+
+#secciones{
+    .cat{
+        background-position:0 100%;
+    }
+    .com{
+        background-position:33.333333333% 100%;
+    }
+    .pro{
+        background-position:66.666666667% 100%;
+    }
+    .dis{
+        background-position:100% 100%;
+    }  
+}
+
+
+// Efectos de mostrar y ocultar
+.oculto{
+    display:none;
+}
+
+.ocultodevista{
+    opacity: 0;
+}
+.muestro{            
+    opacity: 1;
+    display: block;
+    //Llamo la animación
+    .animation(fade-in 1s linear alternate);
+}
+
+// Animación para mostrar
+.keyframes(fade-in;{
+      0% { display: none; opacity: 0; }
+     10% { display: block; }
+     50% { opacity: .5;} 
+     80% { opacity: .8;} 
+    100% { opacity:  1;}
+}); 
+
+.articulo {
+    background-color:rgba(255,255,255,0.7); 
+    padding: 0 2rem;
+    min-height: 800px;
+    h1{
+        margin:1em 0;
+        color: @empresacolor;
+        letter-spacing: .150em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .barra-articulo{
+        width: 100%;
+        min-height: 20px;
+        line-height: 20px;
+        padding: 5px 0;
+        text-align: center;
+        border-top:1px solid @lightgrey;
+        border-bottom:1px solid @lightgrey;
+        margin-bottom: 1rem;
+        position: relative;
+        .btn-compartir{
+            display: block;
+            margin: 10px 0;
+            a{
+            background-color:#68bf22;
+            color:white; 
+            padding:10px 8px; 
+            border-radius:3px; 
+            font-size:12px;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
+        }
+    }
+    img{
+        margin:20px auto;
+        max-width: 60%;
+        width: auto;
+        height: auto;
+        display: block;
+    }
+    .descripcion {
+
+        text-align: justify;
+        width: 100%;
+        p{
+            line-height: 1.8em;
+            letter-spacing: 0.100em;
+            .font-size(15);
+        }
+    }
+    .barra-opciones{
+        text-align: right;
+        margin:20px 0;
+        a{
+            background-image: none;
+            background-color: #008f42;
+            color:@white;
+            .font-size(16);
+            font-weight: normal;
+            width: 100%;
+            margin-bottom: 10px;
+            min-height: 40px;
+            line-height: 40px;
+            
+        }
+
+    }
+}
+.catalogos{
+    padding-top: 50px;
+    h2{
+        margin: 20px 0;
+        color:  @empresafondo;
+        border-bottom: 8px solid;
+        position: relative;
+    }
+    .icono{
+        position: absolute;
+        width:  93px;
+        height: 75px;
+        top: -40px;
+        right:0;
+    }
+	ul{
+		list-style: none;
+        margin: 80px 0;
+        padding: 0;
+        a{
+            li{
+                display: block;
+                border:1px solid @lightgrey;
+                margin-right: 20px;
+                position: relative;
+                margin-bottom: 30px;
+                width: 100%;
+                img{
+                    padding: 0;
+                    margin:0;
+                    min-width: 100%;
+                }
+                span{
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    vertical-align: middle;
+                    text-align: center;
+                    text-transform: uppercase;
+                    .font-size(18);
+                    color:white;
+                    font-weight: bold;
+                }
+            }
+            
+        }
+        
+	}
+}
+#contacto{
+
+    .formulario {
+	    margin-top: 100px;
+        width: 60%;
+        input{
+            height: 40px;
+        }
+        textarea{
+            height: 100px;
+        }
+    }
+}
+footer#footer-page{
+    background-color:#414f51;
+    min-height: 100px;
+    display: block;
+    padding-bottom:30px;
+    text-align: center;
+    .sidebar__footer{
+        padding:40px 0 20px 0;
+        max-width: 500px;
+        margin:0 auto;
+        text-align: center;
+        line-height: 2em;
+        strong{
+            display: none;
+            visibility:hidden;
+        }
+        .tagcloud a{
+            padding: 4px 6px;
+            border:1px solid #338a5c;
+            color:#338a5c;
+            border-radius: 4px;
+            line-height: 1em;
+        }
+        .tagcloud a:hover{
+            color: #414f51;
+            background-color:#338a5c;
+            border-radius: 4px;
+            cursor:pointer;
+            text-decoration: none;        
+        }
+    }
+
+    #privacidad{
+        padding: 5px;
+        color:@white;
+        i{
+            margin-left:-10px;
+            margin-right: 10px;
+            color:@white;
+        }
+        
+    }
+}
+#breadcrumb {
+    margin-top: 40px;
+    line-height: 30px;
+    color: #04f676;
+    padding: 1px;    
+    a {
+        display: block;
+        float: left;
+        background: #00612e;
+        padding-right: 10px;
+        height: 30px;
+        margin-right: 31px;
+        position: relative;
+        text-decoration: none;
+        color: #04f676;   
+        z-index: 10;
+        &:last-of-type {
+            margin-right: 25px;
+        }
+        
+        &:before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: -30px;
+            border: 15px solid transparent;
+            border-color: #00612e;
+            border-left-color: transparent;
+        }
+        
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            right: -30px;
+            border: 15px solid transparent;
+            border-left-color: #00612e;
+        }
+        
+        &:first-of-type {
+            padding-left: 15px;
+            
+            &:before {
+                display: none;
+            }
+        }
+        
+        &:hover {
+            background: #338a5c;
+            color: #fff;
+            text-decoration: none;
+            
+            &:before {
+                border-color: #338a5c;
+                border-left-color: transparent;
+            }
+            
+            &:after {
+                border-left-color: #338a5c;
+            }
+        }
+    }
+    .aqui{
+        display: block;
+        float:left;
+        height: 30px;
+        margin-right: 31px;
+        color:@white;
+        font-weight: bold;
+        border-top: 1px solid #338a5c; 
+        border-bottom: 1px solid #338a5c; 
+        padding: 0px 25px 0 20px;
+        position: relative;
+        background-color: #338a5c;
+        z-index: 1;
+        &:before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -1px;
+            left: -24px;
+            border: 15px solid transparent;
+            border-color: #338a5c;
+            border-left-color: transparent;
+            z-index: 1;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -1px;
+            right: -30px;
+            border: 15px solid transparent;
+            border-left-color: #338a5c;
+        }
+    }
+}
